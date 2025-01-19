@@ -13,57 +13,89 @@ body {
     text-align: center;
     color: #333;
   }
-  
-  /* 容器样式 */
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  /* 资源列表样式 */
-  .resource-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .resource-item {
-    background-color: #fff;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .resource-item h2 {
-    font-size: 18px;
-    margin: 0;
-  }
-  
-  /* 进度条样式 */
-  .progress-container {
-    width: 100%;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-    height: 20px;
-    margin-top: 10px;
-  }
-  
-  .progress-bar {
-    height: 100%;
-    width: 0%;
-    background-color: #4caf50;
-    text-align: center;
-    color: white;
-    line-height: 20px;
-    border-radius: 5px;
-    transition: width 0.3s ease;
-  }
-  
-  /* 进度百分比文字 */
-  .progress-text {
-    font-size: 14px;
-    margin-top: 5px;
-    text-align: center;
-  }
+
+  /* 基本样式 */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+/* 资源列表样式 */
+.resource-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resource-item {
+  background-color: #f7f7f7;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.resource-item h2 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+}
+
+/* 进度条容器样式 */
+.progress-container {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+/* 进度条样式 */
+.progress-bar {
+  height: 100%;
+  text-align: center;
+  line-height: 20px; /* 垂直居中 */
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* 不同进度的颜色 */
+.progress-bar[data-progress="40"] {
+  background-color: #ff9800;
+}
+.progress-bar[data-progress="60"] {
+  background-color: #4caf50;
+}
+.progress-bar[data-progress="20"] {
+  background-color: #f44336;
+}
+.progress-bar[data-progress="80"] {
+  background-color: #2196f3;
+}
+
+/* 进度文本样式 */
+.progress-text {
+  font-size: 1em;
+  color: #333;
+}
+
+/* 链接样式 */
+.resource-link {
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.resource-link:hover {
+  text-decoration: underline;
+}
+
+.progress-link {
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.progress-link:hover {
+  text-decoration: underline;
+}
