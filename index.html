@@ -3,11 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Vue App</title>
+  <title>动态模拟项目</title>
+  <!-- 引用外部 CSS 文件 -->
+  <link rel="stylesheet" href="styles.css">
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-</head>
-<body>
+  </head>
+  <body>
+    <h1>动态模拟项目</h1>
+    <div class="container">
+      <!-- 资源列表 -->
+      <ul class="resource-list">
+        <li class="resource-item">
+          <h2>资源 1: 项目开发</h2>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 40%;">40%</div>
+          </div>
+          <div class="progress-text">进度：40%</div>
+        </li>
+        <li class="resource-item">
+          <h2>资源 2: 设计与规划</h2>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 60%;">60%</div>
+          </div>
+          <div class="progress-text">进度：60%</div>
+        </li>
+        <li class="resource-item">
+          <h2>资源 3: 测试与调试</h2>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 20%;">20%</div>
+          </div>
+          <div class="progress-text">进度：20%</div>
+        </li>
+        <li class="resource-item">
+          <h2>资源 4: 文档编写</h2>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 80%;">80%</div>
+          </div>
+          <div class="progress-text">进度：80%</div>
+        </li>
+      </ul>
+    </div>
   
+    <script>
+      // 模拟动态更新进度条
+      function updateProgressBar() {
+        const progressBars = document.querySelectorAll('.progress-bar');
+        const progressTexts = document.querySelectorAll('.progress-text');
+  
+        progressBars.forEach((bar, index) => {
+          const currentProgress = parseInt(bar.style.width);
+          const newProgress = currentProgress + 5 <= 100 ? currentProgress + 5 : 100; // 增加进度，最大100%
+          
+          // 更新进度条
+          bar.style.width = `${newProgress}%`;
+          bar.innerText = `${newProgress}%`;
+          
+          // 更新进度文字
+          progressTexts[index].innerText = `进度：${newProgress}%`;
+        });
+      }
+  
+      // 每隔2秒更新进度条
+      setInterval(updateProgressBar, 2000);
+    </script>
+
+
+
+
   <div id="app">
     <h1>{{ message }}</h1>
     <button @click="changeMessage">Click Me</button>
@@ -28,5 +90,13 @@
     });
     app.mount("#app");
   </script>
+
+
+
+
+
+
+
+
 </body>
 </html>

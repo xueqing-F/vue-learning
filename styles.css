@@ -1,0 +1,69 @@
+/* styles.css */
+
+/* 页面背景和字体样式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* 标题样式 */
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* 容器样式 */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* 资源列表样式 */
+  .resource-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .resource-item {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .resource-item h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  /* 进度条样式 */
+  .progress-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    margin-top: 10px;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #4caf50;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+  }
+  
+  /* 进度百分比文字 */
+  .progress-text {
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+  }
